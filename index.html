@@ -165,6 +165,14 @@ Error message and password prompt
 
 <li>$:/state/tab/sidebar--1835078512</li>
 
+<li>$:/state/toc/TableOfContents-Programming Languages--81657105</li>
+
+<li>$:/state/toc/TableOfContents-Project Experiences--81657105</li>
+
+<li>$:/state/toc/TableOfContents-Tech Concepts--81657105</li>
+
+<li>$:/state/toc/TableOfContents-Working with table menu--81657105</li>
+
 <li>$:/StoryList</li>
 
 <li>$:/temp/info-plugin</li>
@@ -187,6 +195,12 @@ Error message and password prompt
 
 <li>Docker: Beginner's trials</li>
 
+<li>General Programming</li>
+
+<li>IAM vs SSO</li>
+
+<li>Java</li>
+
 <li>LDAP Directory Service</li>
 
 <li>Message Queue Walkthrough</li>
@@ -195,7 +209,13 @@ Error message and password prompt
 
 <li>Miscellaneous Tech Concepts</li>
 
+<li>Project Experiences</li>
+
 <li>Security in General</li>
+
+<li>TableOfContents</li>
+
+<li>Tech Concepts</li>
 
 <li>Untitled</li>
 
@@ -8794,10 +8814,22 @@ Error message and password prompt
 <div created="20180920153059766" modified="20180923054903205" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Appearance</pre>
 </div>
-<div created="20180920162824578" modified="20180923052940481" title="$:/state/tab/sidebar--1835078512">
-<pre>$:/core/ui/SideBar/Recent</pre>
+<div created="20180920162824578" modified="20181129162623780" title="$:/state/tab/sidebar--1835078512">
+<pre>TableOfContents</pre>
 </div>
-<div list="[[Message Queue Walkthrough]]" title="$:/StoryList">
+<div created="20181126141309241" modified="20181126141311092" title="$:/state/toc/TableOfContents-Programming Languages--81657105">
+<pre>open</pre>
+</div>
+<div created="20181126141306249" modified="20181129162446791" title="$:/state/toc/TableOfContents-Project Experiences--81657105">
+<pre>open</pre>
+</div>
+<div created="20181126141406328" modified="20181129162446439" title="$:/state/toc/TableOfContents-Tech Concepts--81657105">
+<pre>open</pre>
+</div>
+<div created="20181123003654029" modified="20181123003654029" title="$:/state/toc/TableOfContents-Working with table menu--81657105">
+<pre>open</pre>
+</div>
+<div list="[[IAM vs SSO]] [[About Me]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8854,7 +8886,7 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20180921165534495" modified="20181017151540267" title="$:/temp/search">
+<div created="20180921165534495" modified="20181129170200319" title="$:/temp/search">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.17">
@@ -8969,19 +9001,11 @@ Error message and password prompt
 <div created="20180920153108079" modified="20180920153108079" title="$:/themes/tiddlywiki/vanilla/options/sidebarlayout">
 <pre>fluid-fixed</pre>
 </div>
-<div created="20180920161214962" modified="20180923055401167" tags="General" title="About Me">
-<pre>&quot;&quot;&quot;
-I don't have a mind palace like Sherlock Holmes.
-So I just build one in the digital world.
-Then I only need to remember where to access it,
-and how to use it for problem solving.
-That would be much simpler, right?
-
-PS: I started building this at two months after landed on my first job.
-Just process to the side-bar and play around...
-&quot;&quot;&quot;</pre>
+<div created="20181126142004045" modified="20181129162629160" tags="TableOfContents" title="About Me">
+<pre>Just a place to store fragmented knowledge. 
+Believing that the dots will connect one day.</pre>
 </div>
-<div created="20181017155446527" modified="20181017161630971" tags="[[Computer Network]] General" title="Computer Network in General">
+<div created="20181017155446527" modified="20181126141807275" tags="[[Tech Concepts]]" title="Computer Network in General">
 <pre>''Analogy:''
 
 IP is a highway for transportation, and TCP / UDP are trucks to deliver information, while HTTP / FTP / SMTP are loads to carry.
@@ -9944,10 +9968,75 @@ w�4��z����c666vw������N�
 
 # [[crawl]]</pre>
 </div>
-<div created="20180928172521794" modified="20180928173134888" tags="" title="Docker: Beginner's trials">
+<div created="20180928172521794" modified="20181126141833736" tags="[[Project Experiences]]" title="Docker: Beginner's trials">
 <pre>[[Official site|https://docs.docker.com/get-started/]]</pre>
 </div>
-<div created="20181012170701521" modified="20181012172108280" tags="Data" title="LDAP Directory Service">
+<div created="20181125140707073" modified="20181126141708034" tags="[[Tech Concepts]]" title="General Programming">
+<pre>Concurrent vs Parallel processing
+
+Concurrent:
+Multiple processes run on the same processor (CPU). CPU run programs in blocks of time.
+On a single CPU, it will run A in first block, then switch to B in second block, regardless of A's completeness, then switch back to A or switch to C.
+User will not notice the switch since CPU processes in extreme speed.
+
+Parallel:
+Multiple CPUs run programs at the same time. One CPU runs A while another CPU runs B.
+
+Analogy:
+You and me dine together. From my perspective, I eat a spoon of rice first, then a slice of fish, then some soup. In the end I still finished my meal, but the process is considered concurrent for me.
+
+From both of us;s perspectives, we are eating together, we could have meat, vegs at the same point of time. This will be parallel.
+
+Conclusion:
+Concurrent refers to multiple processes run within a same period of time.
+Parallel refers to the ability of running multiple processes at any point of time.
+
+Concurrent processes strive for resources while parallel processes don't.</pre>
+</div>
+<div created="20181129163307449" modified="20181129165254861" tags="[[Tech Concepts]]" title="IAM vs SSO">
+<pre>!!! Definition:
+''Identity &amp; Access Management (IAM)''
+
+In security aspect, it refers to the system that allows an identified individual to access the right resources at the right time, and for right reasons.
+It address the need to ensure appropriate access to resources across increasing heterogeneous technology environments and to meet increasing rigorous compliance requirements.
+
+
+''Single-Sign-On (SSO)''
+
+An independent system that allows a user to access multiple resources provided by different hosts with a single set of credentials.
+
+&lt;hr&gt;
+
+While implementing a SSO portal helps to address a company's identity and access needs, a full-featured IAM system has much to offer, including other equally important features that go way beyond the capabilities of an SSO portal alone.
+
+According to Gartner Research, about 40% of help-desk issues reported are password-related. With SSO, a single set of account &amp; password provides access to any resources integrated with SSO portal, eliminating the needs to remember login credentials for each applications. This dramatically reduces password-reset issues and in general, the cost of implementing SSO portal can be compensated with the reducing operation costs in 2 years.
+
+Unfortunately, vendors and press-generated noise surrounding SSO has caused a great deal of confusion regarding what an organization really needs in terms of IAM. This noise leads people to believe that password issues are the bulk of their identity woes and can be solved easily by an SSO portal.
+
+The fact is, most organizations has other challenges that they must address when it comes to managing user identities and access.</pre>
+</div>
+<div created="20181123003656135" modified="20181126141444567" tags="[[Tech Concepts]]" title="Java">
+<pre>Abstract Class vs Interface
+
+Interface is rules. It gives the idea of what needs to be done, instead of how it will be done.
+vs 
+Abstract class may contains abstract declaration or concrete implementation, or both.
+Abstract declaration are rules to follow; concrete implementation are like guidelines,  it can be used directly or override to do modification.
+
+Types of methods: 
+Interface: Abstract
+Abstract class: Abstract or non-abstract
+
+Variables:
+Interface: Static and final
+Abstract class: static, non-static, final, non-final
+
+Three-pillars:
+Interface: Total abstraction
+Abstract class: Mainly Inheritance
+</pre>
+</div>
+<div created="20181012170701521" modified="20181126141826533" tags="[[Tech Concepts]]" title="LDAP Directory Service">
 <pre>Directory Service vs Database (DS vs DB)
 
 DS is more useful when it comes to storing user profile information. It supports much quicker READ operation at the cost of slower WRITE information.
@@ -9968,7 +10057,7 @@ An ldap directory can be distributed among many servers. Each server have a repl
 
 An LDAP server is called a Directory System Agent (DSA). A DSA receives a request from a user takes responsibility for the request, passing it to other DSAs when necessary, but ensuring a single coordinated response for the user. </pre>
 </div>
-<div created="20181023140725260" modified="20181023145725073" tags="[[Computer Network]]" title="Message Queue Walkthrough">
+<div created="20181023140725260" modified="20181126141747179" tags="[[Tech Concepts]]" title="Message Queue Walkthrough">
 <pre>''Advanced Message Queue Protocol'' (AMQP) is an application layer protocol for ''message-oriented'' middleware.
 
 The defining features of AMQP are:
@@ -9984,7 +10073,7 @@ Basic setup
 Client - MQ server (Broker) - Server
 </pre>
 </div>
-<div created="20181003161234725" modified="20181003162738156" tags="Data" title="Metadata">
+<div created="20181003161234725" modified="20181126141728148" tags="[[Tech Concepts]]" title="Metadata">
 <pre>&quot;&quot;&quot;
 Data that describes other data
 like attributes of an object, or
@@ -9997,7 +10086,7 @@ Early 1990, metatags are often evaluated by search engines to help decide a web 
 
 </pre>
 </div>
-<div created="20180923053333181" modified="20180928164812887" tags="General" title="Miscellaneous Tech Concepts">
+<div created="20180923053333181" modified="20181126141855810" tags="[[Tech Concepts]]" title="Miscellaneous Tech Concepts">
 <pre>!!!This tiddler contains only brief descriptions on the terms that I encountered in the domain. Internal links to separated tiddlers will be built when I have a deeper understanding of the concepts. 
 
 &lt;hr&gt;
@@ -10031,7 +10120,10 @@ Major components:
 ''Identity &amp; Access Management''
 Project lifecycle...</pre>
 </div>
-<div created="20181017132531019" modified="20181017152139794" tags="" title="Security in General">
+<div created="20181126141519876" list="[[Web Crawling / scraping]]" modified="20181126141550330" tags="TableOfContents" title="Project Experiences">
+<pre>&lt;&lt;list-links &quot;[tag[Project Experiences]]&quot;&gt;&gt;</pre>
+</div>
+<div created="20181017132531019" modified="20181126141816350" tags="[[Tech Concepts]]" title="Security in General">
 <pre>''Cross Site Scripting (XSS) :''
 
 Cross-site scripting (XSS) is a type of injection security attack in which an attacker injects data, such as a malicious script, into content from otherwise trusted websites. Cross-site scripting attacks happen when an untrusted source is allowed to inject its own code into a web application, and that malicious code is included with dynamic content delivered to a victim's browser.
@@ -10048,10 +10140,20 @@ Using social engineering to trick the victim opening a link inadvertently, sendi
 
 Advanced from reflected XSS, but note that the HTTP response sent from the server does not contain the attacker’s payload. This payload manifests itself at the client-side script at runtime, when a flawed script accesses the DOM variable document.location and assumes it is not malicious.</pre>
 </div>
+<div caption="{{$:/language/SideBar/Contents/Caption}}" created="20181108144012988" list="[[Tech Concepts]] [[Project Experiences]] [[About Me]]" list-after="$:/core/ui/SideBar/Open" modified="20181129165829174" tags="$:/tags/SideBar" title="TableOfContents" type="text/vnd.tiddlywiki">
+<pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
+
+&lt;&lt;toc-selective-expandable 'TableOfContents'&gt;&gt;
+
+&lt;/div&gt;</pre>
+</div>
+<div created="20181125145115890" list="" modified="20181129163130262" tags="TableOfContents" title="Tech Concepts" type="text/vnd.tiddlywiki">
+<pre>&lt;&lt;list-links &quot;[tag[Tech Concepts]]&quot;&gt;&gt;</pre>
+</div>
 <div title="Untitled">
 <pre>&lt;strong style=&quot;box-sizing: border-box; font-weight: bold; color: rgb(51, 51, 51); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;Tech Stacks:&lt;/strong&gt;&lt;br style=&quot;box-sizing: border-box; color: rgb(51, 51, 51); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;Python 3.6&lt;/span&gt;&lt;br style=&quot;box-sizing: border-box; color: rgb(51, 51, 51); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;Scrapy 1.5&lt;/span&gt;&lt;br style=&quot;box-sizing: border-box; color: rgb(51, 51, 51); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;BeautifulSoup 4&lt;/span&gt;&lt;br style=&quot;box-sizing: border-box; color: rgb(51, 51, 51); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;</pre>
 </div>
-<div created="20180920162507451" modified="20180923053049542" tags="HTML Data Python" title="Web crawling / scraping" type="text/vnd.tiddlywiki">
+<div created="20180920162507451" modified="20181126141304244" tags="[[Project Experiences]]" title="Web crawling / scraping" type="text/vnd.tiddlywiki">
 <pre>&quot;&quot;&quot;
 ''Project requirement''
 A friend of mine is doing an undergraduate thesis to study the impact of on-stage actors to the grosses of Broadway shows.
