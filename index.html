@@ -8843,8 +8843,8 @@ Error message and password prompt
 <div created="20180920162824578" modified="20190115155710602" title="$:/state/tab/sidebar--1835078512">
 <pre>TableOfContents</pre>
 </div>
-<div created="20190115153343687" modified="20190919152834354" title="$:/state/toc/TableOfContents-Notes--81657105">
-<pre>open</pre>
+<div created="20190115153343687" modified="20191018025302457" title="$:/state/toc/TableOfContents-Notes--81657105">
+<pre>close</pre>
 </div>
 <div created="20181126141309241" modified="20181126141311092" title="$:/state/toc/TableOfContents-Programming Languages--81657105">
 <pre>open</pre>
@@ -8852,8 +8852,8 @@ Error message and password prompt
 <div created="20181126141306249" modified="20190919152830955" title="$:/state/toc/TableOfContents-Project Experiences--81657105">
 <pre>close</pre>
 </div>
-<div created="20181126141406328" modified="20190919152833554" title="$:/state/toc/TableOfContents-Tech Concepts--81657105">
-<pre>close</pre>
+<div created="20181126141406328" modified="20191018025303624" title="$:/state/toc/TableOfContents-Tech Concepts--81657105">
+<pre>open</pre>
 </div>
 <div created="20181123003654029" modified="20181123003654029" title="$:/state/toc/TableOfContents-Working with table menu--81657105">
 <pre>open</pre>
@@ -8867,10 +8867,10 @@ Error message and password prompt
 <div created="20190115155958109" modified="20190919152927275" title="$:/state/toc/TableOfContents/Notes-Introduction to Computer Network--81657105">
 <pre>open</pre>
 </div>
-<div created="20190109164418771" modified="20190919152831759" title="$:/state/toc/TableOfContents/Tech Concepts-Java--81657105">
-<pre>close</pre>
+<div created="20190109164418771" modified="20191018025308197" title="$:/state/toc/TableOfContents/Tech Concepts-Java--81657105">
+<pre>open</pre>
 </div>
-<div list="$:/ControlPanel [[IBM Blockchain Essentials]]" title="$:/StoryList">
+<div list="Terminology [[About Me]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8886,7 +8886,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file:///home/minghao/Workspace/wiki/index.html&quot;
+            &quot;text&quot;: &quot;file:///C:/Users/minghchen/Downloads/index.html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
@@ -8906,7 +8906,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/home/minghao/Workspace/wiki/index.html&quot;
+            &quot;text&quot;: &quot;/C:/Users/minghchen/Downloads/index.html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -8914,15 +8914,15 @@ Error message and password prompt
         },
         &quot;$:/info/url/origin&quot;: {
             &quot;title&quot;: &quot;$:/info/url/origin&quot;,
-            &quot;text&quot;: &quot;null&quot;
+            &quot;text&quot;: &quot;file://&quot;
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1920&quot;
+            &quot;text&quot;: &quot;1280&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;1080&quot;
+            &quot;text&quot;: &quot;720&quot;
         }
     }
 }</pre>
@@ -10246,7 +10246,7 @@ Advanced from reflected XSS, but note that the HTTP response sent from the serve
 <div created="20181125145115890" list="" modified="20190109164206412" tags="TableOfContents" title="Tech Concepts" type="text/vnd.tiddlywiki">
 <pre>&lt;&lt;list-links &quot;[tag[Tech Concepts]]&quot;&gt;&gt;</pre>
 </div>
-<div created="20181123003656135" modified="20190115153621906" tags="Java" title="Terminology">
+<div created="20181123003656135" modified="20191018072734968" tags="Java" title="Terminology">
 <pre>Abstract Class vs Interface
 
 Interface is rules. It gives the idea of what needs to be done, instead of how it will be done.
@@ -10265,6 +10265,24 @@ Abstract class: static, non-static, final, non-final
 Three-pillars:
 Interface: Total abstraction
 Abstract class: Mainly Inheritance
+
+!!! Spring:
+''Interceptor:''
+before sending request to controller / before sending response back to client.
+
+preHandle()
+postHandle()
+afterCompletion()
+
+Add the interceptor to InterceptorRegistry
+
+```
+Q: How to map different interceptor to different controller?
+A: Declare all the interceptor class at spring context.xml file with tag &lt;mvc:interceptors&gt; and map it to respective url endpoints.
+```
+
+
+''RestTemplate'': For accessing third-party application within Spring application. Return object is a string or de-serialize to an object. Opposite to ''RestAPI''
 </pre>
 </div>
 <div title="Untitled">
