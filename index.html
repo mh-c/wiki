@@ -205,6 +205,8 @@ Error message and password prompt
 
 <li>Chap 1. Introduction</li>
 
+<li>CMS for part-time master in China</li>
+
 <li>Computer Network</li>
 
 <li>Computer Science</li>
@@ -8851,13 +8853,13 @@ Error message and password prompt
 <div created="20191024102519159" modified="20191024102519159" title="$:/state/toc/TableOfContents-Knowledge Fragments--81657105">
 <pre>open</pre>
 </div>
-<div created="20190115153343687" modified="20191024092612424" title="$:/state/toc/TableOfContents-Notes--81657105">
+<div created="20190115153343687" modified="20191028102653742" title="$:/state/toc/TableOfContents-Notes--81657105">
 <pre>close</pre>
 </div>
 <div created="20181126141309241" modified="20181126141311092" title="$:/state/toc/TableOfContents-Programming Languages--81657105">
 <pre>open</pre>
 </div>
-<div created="20181126141306249" modified="20191024100828382" title="$:/state/toc/TableOfContents-Project Experiences--81657105">
+<div created="20181126141306249" modified="20191028102654627" title="$:/state/toc/TableOfContents-Project Experiences--81657105">
 <pre>open</pre>
 </div>
 <div created="20181126141406328" modified="20191018025303624" title="$:/state/toc/TableOfContents-Tech Concepts--81657105">
@@ -8878,7 +8880,7 @@ Error message and password prompt
 <div created="20190109164418771" modified="20191024092614896" title="$:/state/toc/TableOfContents/Tech Concepts-Java--81657105">
 <pre>open</pre>
 </div>
-<div list="Python [[Knowledge Fragments]] [[Message Queue]] Security [[Computer Network]] Terminology [[Computer Science]] [[IAM vs SSO]] Java" title="$:/StoryList">
+<div list="[[CMS for part-time master in China]] [[Web crawling / scraping]] [[Docker: Beginner's trials]] [[About Me]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8894,7 +8896,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file:///C:/Users/minghchen/wiki/index.html&quot;
+            &quot;text&quot;: &quot;file:///home/minghao/Workspace/wiki/index.html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
@@ -8914,7 +8916,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/C:/Users/minghchen/wiki/index.html&quot;
+            &quot;text&quot;: &quot;/home/minghao/Workspace/wiki/index.html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -8922,15 +8924,15 @@ Error message and password prompt
         },
         &quot;$:/info/url/origin&quot;: {
             &quot;title&quot;: &quot;$:/info/url/origin&quot;,
-            &quot;text&quot;: &quot;file://&quot;
+            &quot;text&quot;: &quot;null&quot;
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1280&quot;
+            &quot;text&quot;: &quot;1536&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;720&quot;
+            &quot;text&quot;: &quot;864&quot;
         }
     }
 }</pre>
@@ -9099,6 +9101,36 @@ How many bits can be communicate per unit time, from end-to-end.
 -- Network -- (IP, routing protocol)
 -- Link -- (data transfer between neighboring network elements, Ethernet, 802.11 wifi)
 -- Physical -- (bits on the wire)</pre>
+</div>
+<div created="20191028102712291" modified="20191028111055785" tags="[[Project Experiences]]" title="CMS for part-time master in China">
+<pre>&quot;&quot;&quot;
+''Project requirement''
+My sister, who is working in post-grad education in China, feels that the current market is lacking a centralized platform to browse and compare part-time master courses provided by the hundreds of high schools across the country. Thus we decided to build such a Content Management System (CMS) using all open-source tools online.
+
+For current phase we are doing it as a non-profit manner and be open-source upon go-live.
+
+
+''Tech Stacks'' 
+Python 3.x
+Django 2.2.6 
+Gunicorn for python web server
+Heroku PaaS &amp; CI/CD &amp; Postgres (for dev and demo phase)
+SQLite (for local dev)
+Materials Design (cdn version for now)
+
+
+''Integration''
+Since Django provides 'template' (like Laravel for PHP) which eliminates the needs for separating back-end and front-end components, I chose to go with this feature due to:
+1. Current forecast for this app does not require much user-interaction, neither it requires complex DOM component interaction like SPA.
+2. Not much experienced in front-end (JS, Webpack, react etc)
+3. If required in the future, front-end can be separated leaving Django API as the back-end framework
+
+Attached a great tutorial to explain the different forms of integrations between React &amp; Django:
+https://www.valentinog.com/blog/drf/
+
+&quot;&quot;&quot;
+
+!! TBC...</pre>
 </div>
 <div created="20181017155446527" list="" modified="20191024102528283" tags="[[Knowledge Fragments]]" title="Computer Network">
 <pre>''Analogy:''
