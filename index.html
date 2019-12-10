@@ -8879,8 +8879,8 @@ Error message and password prompt
 <div created="20180920162824578" modified="20190115155710602" title="$:/state/tab/sidebar--1835078512">
 <pre>TableOfContents</pre>
 </div>
-<div created="20191024102519159" modified="20191208171509180" title="$:/state/toc/TableOfContents-Knowledge Fragments--81657105">
-<pre>close</pre>
+<div created="20191024102519159" modified="20191210045311396" title="$:/state/toc/TableOfContents-Knowledge Fragments--81657105">
+<pre>open</pre>
 </div>
 <div created="20190115153343687" modified="20191208171459966" title="$:/state/toc/TableOfContents-Notes--81657105">
 <pre>close</pre>
@@ -8934,19 +8934,19 @@ Error message and password prompt
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file:///home/minghao/Workspace/wiki/index.html&quot;
+            &quot;text&quot;: &quot;https://mh-c.github.io/wiki/&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
-            &quot;text&quot;: &quot;&quot;
+            &quot;text&quot;: &quot;mh-c.github.io&quot;
         },
         &quot;$:/info/url/hostname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/hostname&quot;,
-            &quot;text&quot;: &quot;&quot;
+            &quot;text&quot;: &quot;mh-c.github.io&quot;
         },
         &quot;$:/info/url/protocol&quot;: {
             &quot;title&quot;: &quot;$:/info/url/protocol&quot;,
-            &quot;text&quot;: &quot;file:&quot;
+            &quot;text&quot;: &quot;https:&quot;
         },
         &quot;$:/info/url/port&quot;: {
             &quot;title&quot;: &quot;$:/info/url/port&quot;,
@@ -8954,7 +8954,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/home/minghao/Workspace/wiki/index.html&quot;
+            &quot;text&quot;: &quot;/wiki/&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -8962,15 +8962,15 @@ Error message and password prompt
         },
         &quot;$:/info/url/origin&quot;: {
             &quot;title&quot;: &quot;$:/info/url/origin&quot;,
-            &quot;text&quot;: &quot;null&quot;
+            &quot;text&quot;: &quot;https://mh-c.github.io&quot;
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1920&quot;
+            &quot;text&quot;: &quot;1536&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;1080&quot;
+            &quot;text&quot;: &quot;864&quot;
         }
     }
 }</pre>
@@ -10263,8 +10263,8 @@ A: Declare all the interceptor class at spring context.xml file with tag &lt;mvc
 ''RestTemplate'': For accessing third-party application within Spring application. Return object is a string or de-serialize to an object. Opposite to ''RestAPI''
 </pre>
 </div>
-<div created="20181125145115890" list="" modified="20191024102517435" tags="TableOfContents" title="Knowledge Fragments" type="text/vnd.tiddlywiki">
-<pre>&lt;&lt;list-links &quot;[tag[Tech Concepts]]&quot;&gt;&gt;</pre>
+<div created="20181125145115890" list="" modified="20191210045348555" tags="TableOfContents" title="Knowledge Fragments" type="text/vnd.tiddlywiki">
+<pre>&lt;&lt;list-links &quot;[tag[Knowledge Fragments]]&quot;&gt;&gt;</pre>
 </div>
 <div created="20181012170701521" list="" modified="20191118150248795" tags="[[Architecture &amp; Design]]" title="LDAP Directory Service">
 <pre>Directory Service vs Database (DS vs DB)
@@ -10452,7 +10452,7 @@ Authenticator issued a challenge, and authenticated should response by using an 
 <div created="20181126141519876" list="[[Web Crawling / scraping]]" modified="20181126141550330" tags="TableOfContents" title="Project Experiences">
 <pre>&lt;&lt;list-links &quot;[tag[Project Experiences]]&quot;&gt;&gt;</pre>
 </div>
-<div created="20191024102622160" modified="20191208170316829" tags="[[Knowledge Fragments]]" title="Python">
+<div created="20191024102622160" modified="20191210065101822" tags="[[Knowledge Fragments]]" title="Python">
 <pre>!!! Python Constructor 
 
 ```
@@ -10461,6 +10461,24 @@ __init__(self, a, b):
   self.b = b
 
 ```
+
+!!! Python scripting
+```
+import sys
+
+def func1(a)
+    print(&quot;Running func1 with parameter: &quot; + a)
+
+if __name__ == &quot;__main__&quot;
+    a = sys.argv[1]
+    func1(a)
+
+
+```
+When writing simple python scripts to process file, the if statement above will be true if this .py file is passed to be executed as the main function.
+
+If current .py file is being imported as a module, then the  __name__ variable will be assigned as the name of the file, instead of __main__
+
 
 !!! Connexion
 HTTP handler built on Flask Framework
