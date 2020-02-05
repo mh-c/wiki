@@ -243,6 +243,10 @@ Error message and password prompt
 
 <li>Intermediate Python by Yasoob</li>
 
+<li>Intermediate Python Part 1</li>
+
+<li>Intermediate Python Part 2</li>
+
 <li>Introduction to Computer Network</li>
 
 <li>Java</li>
@@ -8883,16 +8887,16 @@ Error message and password prompt
 <div created="20180920162824578" modified="20190115155710602" title="$:/state/tab/sidebar--1835078512">
 <pre>TableOfContents</pre>
 </div>
-<div created="20191024102519159" modified="20191210045311396" title="$:/state/toc/TableOfContents-Knowledge Fragments--81657105">
+<div created="20191024102519159" modified="20200205134007239" title="$:/state/toc/TableOfContents-Knowledge Fragments--81657105">
 <pre>open</pre>
 </div>
-<div created="20190115153343687" modified="20200204024639551" title="$:/state/toc/TableOfContents-Notes--81657105">
+<div created="20190115153343687" modified="20200205134009973" title="$:/state/toc/TableOfContents-Notes--81657105">
 <pre>open</pre>
 </div>
 <div created="20181126141309241" modified="20181126141311092" title="$:/state/toc/TableOfContents-Programming Languages--81657105">
 <pre>open</pre>
 </div>
-<div created="20181126141306249" modified="20200204024610229" title="$:/state/toc/TableOfContents-Project Experiences--81657105">
+<div created="20181126141306249" modified="20200205134008855" title="$:/state/toc/TableOfContents-Project Experiences--81657105">
 <pre>open</pre>
 </div>
 <div created="20181126141406328" modified="20191018025303624" title="$:/state/toc/TableOfContents-Tech Concepts--81657105">
@@ -8925,7 +8929,7 @@ Error message and password prompt
 <div created="20190109164418771" modified="20191024092614896" title="$:/state/toc/TableOfContents/Tech Concepts-Java--81657105">
 <pre>open</pre>
 </div>
-<div list="[[Intermediate Python by Yasoob]]" title="$:/StoryList">
+<div list="[[Intermediate Python Part 2]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -10228,7 +10232,10 @@ Industry group - Provide technical advice on industry trends, encourage best pra
 Market Maker - Who innovates
  </pre>
 </div>
-<div created="20200204024641194" modified="20200204065449950" tags="Notes" title="Intermediate Python by Yasoob">
+<div created="20200205134041849" modified="20200205134123099" tags="Notes" title="Intermediate Python by Yasoob">
+<pre>&lt;&lt;list-links &quot;[tag[Intermediate Python by Yasoob]]&quot;&gt;&gt;</pre>
+</div>
+<div created="20200204024641194" modified="20200205134158853" tags="[[Intermediate Python by Yasoob]]" title="Intermediate Python Part 1">
 <pre>! 1. *args and **kwargs
 
 //**// for passing key-value pair 
@@ -10362,6 +10369,93 @@ print(func())
 Use cases: Authorization, Logging
 
 </pre>
+</div>
+<div created="20200205134212634" modified="20200205164139898" tags="[[Intermediate Python by Yasoob]]" title="Intermediate Python Part 2">
+<pre>! 8. Global and Return 
+
+```
+def add(value1,value2):
+    global result
+    result = value1 + value2
+
+add(3,5)
+print(result)
+```
+
+However, try to avoid using `GLOBAL` scope, return `tuple`, `list`, `dict` instead.
+
+! 9. Mutation 
+
+For python:  Whenever you assign a variable to another variable of mutable datatype, any changes to the data are reflected by both variables. The new variable is just an alias for the old variable.
+
+Mutable:
+
+```
+def add_to(num, target=[]):
+    target.append(num)
+    return target
+
+add_to(1)
+# Output: [1]
+
+add_to(2)
+# Output: [1, 2]
+
+add_to(3)
+# Output: [1, 2, 3]
+```
+
+Immutable:
+
+```
+def add_to(element, target=None):
+    if target is None:
+        target = []
+    target.append(element)
+    return target
+```
+
+! 10. slots
+
+By default, python uses `dict` for storing attributes for a class. If creating thousands or millions of object, ``__slots__`` can be used to allocate adequate space in RAM.
+
+```
+class MyClass(object):
+    __slots__ = ['name', 'identifier']
+    def __init__(self, name, identifier):
+        self.name = name
+        self.identifier = identifier
+        self.set_up()
+    # ...
+```
+
+! 11. Virtualenv 
+
+Can provide `--system-site-packages` to give access to system site-packages
+
+! 12. Collections
+
+Examples for python default collections:
+
+* ''defaultdict'': save the trouble of checking key not found
+* ''OrderedDict'': saved as the order of insertion
+* ''Counter'': count the occurrences of a particular item in a dict or duplicate lines in a file
+*  ''deque'': a queue which can add/remove from both ends
+* ''namedtuple'': like a `dict`
+
+! 13. Enumerate
+
+Loop with a counter (can specify staring point)
+
+! 14. Object introspection
+
+To determine type of the object at runtime
+
+`dir` returns the attributes and methods belonging to the object
+
+`type` returns the type, `id` returns the unique id of the object
+
+`inspect` module gets info about live objects, like `getmembers(str)`</pre>
 </div>
 <div created="20190115153229195" modified="20190115155956928" tags="Notes" title="Introduction to Computer Network">
 <pre>&lt;&lt;list-links &quot;[tag[Introduction to Computer Network]]&quot;&gt;&gt;</pre>
