@@ -235,6 +235,8 @@ Error message and password prompt
 
 <li>Draft of 'New Tiddler'</li>
 
+<li>Draft of 'OAuth 2'</li>
+
 <li>Hash Map Implementation</li>
 
 <li>IAM vs SSO</li>
@@ -8916,14 +8918,14 @@ Error message and password prompt
 <div created="20191118083411212" modified="20200219095234082" title="$:/state/toc/TableOfContents/Knowledge Fragments-Security--81657105">
 <pre>open</pre>
 </div>
-<div created="20190725034446236" modified="20191208170224946" title="$:/state/toc/TableOfContents/Notes-AWS Data Analytics Fundamentals--81657105">
-<pre>close</pre>
+<div created="20190725034446236" modified="20200219153509508" title="$:/state/toc/TableOfContents/Notes-AWS Data Analytics Fundamentals--81657105">
+<pre>open</pre>
 </div>
 <div created="20190919153015500" modified="20190919153015501" title="$:/state/toc/TableOfContents/Notes-IBM Blockchain Essentials--81657105">
 <pre>open</pre>
 </div>
-<div created="20200204025035954" modified="20200204025035954" title="$:/state/toc/TableOfContents/Notes-Intermediate Python by Yasoob--81657105">
-<pre>open</pre>
+<div created="20200204025035954" modified="20200219153509071" title="$:/state/toc/TableOfContents/Notes-Intermediate Python by Yasoob--81657105">
+<pre>close</pre>
 </div>
 <div created="20190115155958109" modified="20200204024541390" title="$:/state/toc/TableOfContents/Notes-Introduction to Computer Network--81657105">
 <pre>open</pre>
@@ -8931,7 +8933,7 @@ Error message and password prompt
 <div created="20190109164418771" modified="20191024092614896" title="$:/state/toc/TableOfContents/Tech Concepts-Java--81657105">
 <pre>open</pre>
 </div>
-<div list="[[OAuth 2]] Security [[One-Time-Password (OTP)]] [[About Me]]" title="$:/StoryList">
+<div list="[[Draft of 'OAuth 2']] Security [[One-Time-Password (OTP)]] [[About Me]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -10189,6 +10191,56 @@ w�4��z����c666vw������N�
 </div>
 <div created="20190115153519867" draft.of="New Tiddler" draft.title="New Tiddler" modified="20190115153519867" tags="" title="Draft of 'New Tiddler'">
 <pre></pre>
+</div>
+<div created="20200219095316842" draft.of="OAuth 2" draft.title="OAuth 2" modified="20200219153918693" tags="Security" title="Draft of 'OAuth 2'">
+<pre>An authorization framework which enables applications to obtain limited access to user accounts on a HTTP servers, such as FB, Google. 
+
+It works by delegating user authentication to the service that hosts the user account, and authorizing third party application to access the user account.
+
+!! Grant Type #1: Authorization Code
+''Most commonly used, optimized for server-side application,''
+
+[img width=70% [images/oauth2_1.png]]
+
+1. User is redirected to authN server, after providing credential, click &quot;Authorize this 3-rd party app&quot; and provide &quot;read&quot; access.
+
+2. Auth server redirect back to app with authorization code, app received authO token.
+
+3. App present authO code with client_id, client_credential to get user's ''access token''.
+
+4. Application receives access token
+
+!! Grant Type #2: Implicit 
+''Mainly for browser-based application where application cannot send request to cross-domain, using user-agent instead''
+
+[img width=70% [images/oauth2_2.png]]
+
+1. User is redirected to authN server, once authenticated, client received a token (grant type is token instead of authO code)
+
+2. user agent redirect to client (while retaining the token)
+
+3. client send token extract script
+
+4. user agent extract ''access token'' using script and retained token
+
+5. user agent send access token to client
+
+!! Grant Type #3: Resource Owner Password Credential
+''User provides username &amp; password, app posts to authN server and get back access token. (Credential is shared with third-party app)''
+
+!! Grant Type #4: Client-secret
+''Third-party itself uses its client_id and client_credential to access its own service account. ''
+
+----
+
+Implicit flow, while simplified from authO code flow, came with additional security concerns. Due to authO server DOES NOT AUTHENTICATE the client/application.
+
+This was invented back in 2010 since browser-based applications are prohibited to send cross-domian request. This restriction is removed later with the emergence of Cross-Origin Resource Sharing (link to new tiddler, TBC)
+
+Attached [[RFC 6749|https://tools.ietf.org/html/rfc6749#]]
+10.3 and 10.16 for the use of implicit flow
+
+</pre>
 </div>
 <div created="20191208170404984" modified="20191208170755051" tags="[[Data Structure &amp; Algorithm]]" title="Hash Map Implementation">
 <pre>Reason for studying hash map came from a real project experience, where it was required to store more than 1 million of &lt;String, String&gt; pair into hash map.
