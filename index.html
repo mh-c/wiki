@@ -267,7 +267,9 @@ Error message and password prompt
 
 <li>Notes</li>
 
-<li>OAuth</li>
+<li>OAuth 2</li>
+
+<li>One-Time-Password (OTP)</li>
 
 <li>Project Experiences</li>
 
@@ -295,8 +297,8 @@ Error message and password prompt
 <!--~~ Ordinary tiddlers ~~-->
 
 <div id="storeArea" style="display:none;">
-<div created="20191024102515985" modified="20191024102526975" title="$:/config/RelinkOnRename">
-<pre>no</pre>
+<div created="20191024102515985" modified="20200219095310271" title="$:/config/RelinkOnRename">
+<pre>yes</pre>
 </div>
 <div created="20180920162808243" modified="20180920162809175" title="$:/config/TextEditor/EditorHeight/Mode">
 <pre>auto</pre>
@@ -8911,8 +8913,8 @@ Error message and password prompt
 <div created="20191208170756485" modified="20200204024607223" title="$:/state/toc/TableOfContents/Knowledge Fragments-Data Structure &amp; Algorithm--81657105">
 <pre>close</pre>
 </div>
-<div created="20191118083411212" modified="20200204024558538" title="$:/state/toc/TableOfContents/Knowledge Fragments-Security--81657105">
-<pre>close</pre>
+<div created="20191118083411212" modified="20200219095234082" title="$:/state/toc/TableOfContents/Knowledge Fragments-Security--81657105">
+<pre>open</pre>
 </div>
 <div created="20190725034446236" modified="20191208170224946" title="$:/state/toc/TableOfContents/Notes-AWS Data Analytics Fundamentals--81657105">
 <pre>close</pre>
@@ -8929,7 +8931,7 @@ Error message and password prompt
 <div created="20190109164418771" modified="20191024092614896" title="$:/state/toc/TableOfContents/Tech Concepts-Java--81657105">
 <pre>open</pre>
 </div>
-<div list="[[Intermediate Python Part 2]]" title="$:/StoryList">
+<div list="[[OAuth 2]] Security [[One-Time-Password (OTP)]] [[About Me]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -10661,7 +10663,46 @@ https://djangobook.com/mdj2-django-structure/
 <div created="20190115153119280" modified="20190115153432107" tags="TableOfContents" title="Notes">
 <pre>&lt;&lt;list-links &quot;[tag[Notes]]&quot;&gt;&gt;</pre>
 </div>
-<div created="20191118081149248" modified="20191118083406964" tags="Security" title="OAuth">
+<div created="20200219095316842" modified="20200219133055606" tags="Security" title="OAuth 2">
+<pre>An authorization framework which enables applications to obtain limited access to user accounts on a HTTP servers, such as FB, Google. 
+
+It works by delegating user authentication to the service that hosts the user account, and authorizing third party application to access the user account.
+
+!! Grant Type #1: Authorization Code
+''Most commonly used, optimized for server-side application,''
+
+1. User is redirected to authN server, after providing credential, click &quot;Authorize this 3-rd party app&quot; and provide &quot;read&quot; access.
+
+2. Auth server redirect back to app with authorization code, app received authO token.
+
+3. App present authO code with client_id, client_credential to get user's ''access token''.
+
+4. Application receives access token
+
+!! Grant Type #2: Implicit 
+''Mostly for mobile &amp; web app where client secret might be exposed
+User agent involved (web browser)''
+
+1. User is redirected to authN server, once authenticated, client received a token (grant type is token instead of authO code)
+
+2. user agent redirect to client (while retaining the token)
+
+3. client send token extract script
+
+4. user agent extract ''access token'' using script and retained token
+
+5. user agent send access token to client
+
+!! Grant Type #3: Resource Owner Password Credential
+''User provides username &amp; password, app posts to authN server and get back access token. (Credential is shared with third-party app)''
+
+!! Grant Type #4: Client-secret
+''Third-party itself uses its client_id and client_credential to access its own service account. ''
+
+----
+Specific usecase (link)</pre>
+</div>
+<div created="20191118081149248" modified="20200219095311520" tags="Security" title="One-Time-Password (OTP)">
 <pre>HOTP vs TOTP vs OCRA
 
 ```
