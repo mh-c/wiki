@@ -235,6 +235,8 @@ Error message and password prompt
 
 <li>Draft of 'New Tiddler'</li>
 
+<li>Forward Proxy vs Reverse Proxy</li>
+
 <li>Hash Map Implementation</li>
 
 <li>IAM vs SSO</li>
@@ -8848,7 +8850,8 @@ Error message and password prompt
     &quot;tiddlers&quot;: {
         &quot;Untitled 1&quot;: {
             &quot;title&quot;: &quot;Untitled 1&quot;,
-            &quot;text&quot;: &quot;r&quot;
+            &quot;text&quot;: &quot;1. bypass firewall restriction to visit blocked website, by hiding the real IP. However forward proxy may be detected by website admin, unless using a numerous proxy systems that changes IP on every visit.\n\n2. Popular in 1990s before Network Address Translation (NAT) was introduced.\n\n3. Can act as cached server in internal network (for downloading content).\n\nTypes includes\nReverse proxy: used by server\n\nMostly to achieve load balancing and high availability. Work along side with firewalls to control traffic.&quot;,
+            &quot;type&quot;: &quot;text/plain&quot;
         }
     }
 }</pre>
@@ -8886,20 +8889,20 @@ Error message and password prompt
 <div created="20180920153059766" modified="20190919154342653" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Saving</pre>
 </div>
-<div created="20180920162824578" modified="20190115155710602" title="$:/state/tab/sidebar--1835078512">
+<div created="20180920162824578" modified="20200220093356222" title="$:/state/tab/sidebar--1835078512">
 <pre>TableOfContents</pre>
 </div>
 <div created="20191024102519159" modified="20200205134007239" title="$:/state/toc/TableOfContents-Knowledge Fragments--81657105">
 <pre>open</pre>
 </div>
-<div created="20190115153343687" modified="20200205134009973" title="$:/state/toc/TableOfContents-Notes--81657105">
+<div created="20190115153343687" modified="20200220093207091" title="$:/state/toc/TableOfContents-Notes--81657105">
 <pre>open</pre>
 </div>
 <div created="20181126141309241" modified="20181126141311092" title="$:/state/toc/TableOfContents-Programming Languages--81657105">
 <pre>open</pre>
 </div>
-<div created="20181126141306249" modified="20200205134008855" title="$:/state/toc/TableOfContents-Project Experiences--81657105">
-<pre>open</pre>
+<div created="20181126141306249" modified="20200220093205834" title="$:/state/toc/TableOfContents-Project Experiences--81657105">
+<pre>close</pre>
 </div>
 <div created="20181126141406328" modified="20191018025303624" title="$:/state/toc/TableOfContents-Tech Concepts--81657105">
 <pre>open</pre>
@@ -8907,14 +8910,14 @@ Error message and password prompt
 <div created="20181123003654029" modified="20181123003654029" title="$:/state/toc/TableOfContents-Working with table menu--81657105">
 <pre>open</pre>
 </div>
-<div created="20191118150220845" modified="20191208171451147" title="$:/state/toc/TableOfContents/Knowledge Fragments-Architecture &amp; Design--81657105">
-<pre>close</pre>
-</div>
-<div created="20191208170756485" modified="20200204024607223" title="$:/state/toc/TableOfContents/Knowledge Fragments-Data Structure &amp; Algorithm--81657105">
-<pre>close</pre>
-</div>
-<div created="20191118083411212" modified="20200219095234082" title="$:/state/toc/TableOfContents/Knowledge Fragments-Security--81657105">
+<div created="20191118150220845" modified="20200220063703580" title="$:/state/toc/TableOfContents/Knowledge Fragments-Architecture &amp; Design--81657105">
 <pre>open</pre>
+</div>
+<div created="20191208170756485" modified="20200220093202171" title="$:/state/toc/TableOfContents/Knowledge Fragments-Data Structure &amp; Algorithm--81657105">
+<pre>close</pre>
+</div>
+<div created="20191118083411212" modified="20200220093205100" title="$:/state/toc/TableOfContents/Knowledge Fragments-Security--81657105">
+<pre>close</pre>
 </div>
 <div created="20190725034446236" modified="20200219153509508" title="$:/state/toc/TableOfContents/Notes-AWS Data Analytics Fundamentals--81657105">
 <pre>open</pre>
@@ -8922,16 +8925,16 @@ Error message and password prompt
 <div created="20190919153015500" modified="20190919153015501" title="$:/state/toc/TableOfContents/Notes-IBM Blockchain Essentials--81657105">
 <pre>open</pre>
 </div>
-<div created="20200204025035954" modified="20200219153509071" title="$:/state/toc/TableOfContents/Notes-Intermediate Python by Yasoob--81657105">
+<div created="20200204025035954" modified="20200220093217347" title="$:/state/toc/TableOfContents/Notes-Intermediate Python by Yasoob--81657105">
 <pre>close</pre>
 </div>
-<div created="20190115155958109" modified="20200204024541390" title="$:/state/toc/TableOfContents/Notes-Introduction to Computer Network--81657105">
-<pre>open</pre>
+<div created="20190115155958109" modified="20200220093214555" title="$:/state/toc/TableOfContents/Notes-Introduction to Computer Network--81657105">
+<pre>close</pre>
 </div>
 <div created="20190109164418771" modified="20191024092614896" title="$:/state/toc/TableOfContents/Tech Concepts-Java--81657105">
 <pre>open</pre>
 </div>
-<div list="[[OAuth 2]] [[About Me]]" title="$:/StoryList">
+<div list="[[Forward Proxy vs Reverse Proxy]] [[Load Balancer &amp; Session]] [[Concurrent vs Parallel Programming]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -10190,6 +10193,24 @@ w�4��z����c666vw������N�
 <div created="20190115153519867" draft.of="New Tiddler" draft.title="New Tiddler" modified="20190115153519867" tags="" title="Draft of 'New Tiddler'">
 <pre></pre>
 </div>
+<div created="20200220063708432" modified="20200220093753493" tags="[[Architecture &amp; Design]]" title="Forward Proxy vs Reverse Proxy">
+<pre>!!! Forward proxy: used by client / group of clients
+
+1. bypass firewall restriction to visit blocked website, by hiding the real IP. However forward proxy may be detected by website admin, unless using a numerous proxy systems that changes IP on every visit.
+
+2. Popular in 1990s before Network Address Translation (NAT) was introduced.
+
+3. Can act as cached server in internal network (for downloading content).
+
+Types includes 
+
+!!! Reverse proxy: used by server 
+
+Mostly to achieve load balancing and high availability.
+Work along side with firewalls to control traffic.
+
+More on reverse proxy / load balancing, go to [[Load Balancer &amp; Session]]</pre>
+</div>
 <div created="20191208170404984" modified="20191208170755051" tags="[[Data Structure &amp; Algorithm]]" title="Hash Map Implementation">
 <pre>Reason for studying hash map came from a real project experience, where it was required to store more than 1 million of &lt;String, String&gt; pair into hash map.
 
@@ -10663,7 +10684,7 @@ https://djangobook.com/mdj2-django-structure/
 <div created="20190115153119280" modified="20190115153432107" tags="TableOfContents" title="Notes">
 <pre>&lt;&lt;list-links &quot;[tag[Notes]]&quot;&gt;&gt;</pre>
 </div>
-<div created="20200219095316842" modified="20200220062939233" tags="Security" title="OAuth 2">
+<div created="20200219095316842" modified="20200220091219233" tags="Security" title="OAuth 2">
 <pre>An authorization framework which enables applications to obtain limited access to user accounts on a HTTP servers, such as FB, Google. 
 
 It works by delegating user authentication to the service that hosts the user account, and authorizing third party application to access the user account.
@@ -10673,28 +10694,28 @@ It works by delegating user authentication to the service that hosts the user ac
 
 [img width=70% [images/oauth2_1.png]]
 
-1. User is redirected to authN server, after providing credential, click &quot;Authorize this 3-rd party app&quot; and provide &quot;read&quot; access.
+* User is redirected to authN server, after providing credential, click &quot;Authorize this 3-rd party app&quot; and provide &quot;read&quot; access.
 
-2. Auth server redirect back to app with authorization code, app received authO token.
+* Auth server redirect back to app with authorization code, app received authO token.
 
-3. App present authO code with client_id, client_credential to get user's ''access token''.
+* App present authO code with client_id, client_credential to get user's ''access token''.
 
-4. Application receives access token
+* Application receives access token
 
 !! Grant Type #2: Implicit 
 ''Mainly for browser-based application where application cannot send request to cross-domain, using user-agent instead''
 
 [img width=70% [images/oauth2_2.png]]
 
-1. User is redirected to authN server, once authenticated, client received a token (grant type is token instead of authO code)
+* User is redirected to authN server, once authenticated, client received a token (grant type is token instead of authO code)
 
-2. user agent redirect to client (while retaining the token)
+* User agent redirect to client (while retaining the token)
 
-3. client send token extract script
+* client send token extract script
 
-4. user agent extract ''access token'' using script and retained token
+* user agent extract ''access token'' using script and retained token
 
-5. user agent send access token to client
+* user agent send access token to client
 
 !! Grant Type #3: Resource Owner Password Credential
 ''User provides username &amp; password, app posts to authN server and get back access token. (Credential is shared with third-party app)''
