@@ -245,9 +245,11 @@ Error message and password prompt
 
 <li>Intermediate Python by Yasoob</li>
 
-<li>Intermediate Python Part 1</li>
+<li>Intermediate Python Part 1/4</li>
 
-<li>Intermediate Python Part 2</li>
+<li>Intermediate Python Part 2/4</li>
+
+<li>Intermediate Python Part 3/4</li>
 
 <li>Introduction to Computer Network</li>
 
@@ -8925,8 +8927,8 @@ Error message and password prompt
 <div created="20190919153015500" modified="20190919153015501" title="$:/state/toc/TableOfContents/Notes-IBM Blockchain Essentials--81657105">
 <pre>open</pre>
 </div>
-<div created="20200204025035954" modified="20200220093217347" title="$:/state/toc/TableOfContents/Notes-Intermediate Python by Yasoob--81657105">
-<pre>close</pre>
+<div created="20200204025035954" modified="20200221032205331" title="$:/state/toc/TableOfContents/Notes-Intermediate Python by Yasoob--81657105">
+<pre>open</pre>
 </div>
 <div created="20190115155958109" modified="20200220093214555" title="$:/state/toc/TableOfContents/Notes-Introduction to Computer Network--81657105">
 <pre>close</pre>
@@ -8934,7 +8936,7 @@ Error message and password prompt
 <div created="20190109164418771" modified="20191024092614896" title="$:/state/toc/TableOfContents/Tech Concepts-Java--81657105">
 <pre>open</pre>
 </div>
-<div list="[[Forward Proxy vs Reverse Proxy]] [[Load Balancer &amp; Session]] [[Concurrent vs Parallel Programming]]" title="$:/StoryList">
+<div list="[[Intermediate Python Part 3/4]] [[Intermediate Python Part 2/4]] [[About Me]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8982,11 +8984,11 @@ Error message and password prompt
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1920&quot;
+            &quot;text&quot;: &quot;1536&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;1080&quot;
+            &quot;text&quot;: &quot;864&quot;
         }
     }
 }</pre>
@@ -10258,7 +10260,7 @@ Market Maker - Who innovates
 <div created="20200205134041849" modified="20200205134123099" tags="Notes" title="Intermediate Python by Yasoob">
 <pre>&lt;&lt;list-links &quot;[tag[Intermediate Python by Yasoob]]&quot;&gt;&gt;</pre>
 </div>
-<div created="20200204024641194" modified="20200205134158853" tags="[[Intermediate Python by Yasoob]]" title="Intermediate Python Part 1">
+<div created="20200204024641194" modified="20200221042105361" tags="[[Intermediate Python by Yasoob]]" title="Intermediate Python Part 1/4">
 <pre>! 1. *args and **kwargs
 
 //**// for passing key-value pair 
@@ -10393,7 +10395,7 @@ Use cases: Authorization, Logging
 
 </pre>
 </div>
-<div created="20200205134212634" modified="20200205164139898" tags="[[Intermediate Python by Yasoob]]" title="Intermediate Python Part 2">
+<div created="20200205134212634" modified="20200221042059226" tags="[[Intermediate Python by Yasoob]]" title="Intermediate Python Part 2/4">
 <pre>! 8. Global and Return 
 
 ```
@@ -10479,6 +10481,187 @@ To determine type of the object at runtime
 `type` returns the type, `id` returns the unique id of the object
 
 `inspect` module gets info about live objects, like `getmembers(str)`</pre>
+</div>
+<div created="20200221032217240" modified="20200221042052948" tags="[[Intermediate Python by Yasoob]]" title="Intermediate Python Part 3/4">
+<pre>! 15. Comprehension
+
+!! List comprehension
+
+```
+multiples = [i for i in range(30) if i % 3 == 0]
+```
+
+!! Dict comprehension
+
+```
+mcase = {'a': 10, 'b': 34, 'A': 7, 'Z': 3}
+
+mcase_frequency = {
+    k.lower(): mcase.get(k.lower(), 0) + mcase.get(k.upper(), 0)
+    for k in mcase.keys()
+}
+
+# mcase_frequency == {'a': 17, 'z': 3, 'b': 34}
+```
+
+or switch key-value:
+
+```
+{v: k for k, v in some_dict.items()}
+```
+
+!! Set comprehension
+
+Similar to list but using `{}` instead
+
+squared = {x**2 for x in [1, 1, 2]}
+
+!! Generator comprehension
+
+User `()` instead, don't allocate memory for the whole list, generate one at a time
+
+```
+multiples_gen = (i for i in range(30) if i % 3 == 0)
+print(multiples_gen)
+# Output: &lt;generator object &lt;genexpr&gt; at 0x7fdaa8e407d8&gt;
+for x in multiples_gen:
+  print(x)
+```
+
+! 16. Exception
+
+try, except, finally, else
+
+code in `else` will be run if no exception occurs. (sounds strange, used in the case where you don't want the code in `else` to be caught by `try`.
+
+```
+try:
+    print('I am sure no exception is going to occur!')
+except Exception:
+    print('exception')
+else:
+    # any code that should only run if no exception occurs in the try,
+    # but for which exceptions should NOT be caught
+    print('This would only run if no exception occurs. And an error here '
+          'would NOT be caught.')
+finally:
+    print('This would be printed in every case.')
+
+# Output: I am sure no exception is going to occur!
+# This would only run if no exception occurs. And an error here would NOT be caught
+# This would be printed in every case.
+```
+
+! 17. Classes
+
+Instances variable vs Class variable (can be shared)
+
+If a class variable is mutable, its changes will be reflected on all other instances, and vice versa.
+
+`__init__` and `__getitem__`:
+
+```
+class GetTest(object):
+    def __init__(self):
+        self.info = {
+            'name':'Yasoob',
+            'country':'Pakistan',
+            'number':12345812
+        }
+
+    def __getitem__(self,i):
+        return self.info[i]
+
+foo = GetTest()
+
+foo['name']
+# Output: 'Yasoob'
+```
+
+! 18. Lambda
+
+Parallel sorting of list:
+
+```
+data = zip(list1, list2)
+data.sort()
+list1, list2 = map(lambda t: list(t), zip(*data))
+```
+
+! 19. One-liners
+
+!! Simple web server for file transfer 
+
+```
+# Python 2
+python -m SimpleHTTPServer
+
+# Python 3
+python -m http.server
+```
+
+!! Pretty printing
+
+```
+from pprint import pprint
+```
+
+!! Pretty print json from a file
+
+```
+cat file.json | python -m json.tool
+```
+
+!! Profiling a script (measure time taken for each function in a script) 
+
+```
+python -m cProfile my_script.py
+```
+
+!! csv to json 
+
+```
+python -c &quot;import csv,json;print json.dumps(list(csv.reader(open('csv_file.csv'))))&quot;
+```
+
+!! List flattening
+
+```
+a_list = [[1, 2], [3, 4], [5, 6]]
+print(list(itertools.chain.from_iterable(a_list)))
+# Output: [1, 2, 3, 4, 5, 6]
+
+# or
+print(list(itertools.chain(*a_list)))
+# Output: [1, 2, 3, 4, 5, 6]
+```
+
+!! One-line constructor
+
+```
+class A(object):
+    def __init__(self, a, b, c, d, e, f):
+        self.__dict__.update({k: v for k, v in locals().items() if k != 'self'})
+```
+
+
+
+
+
+! 20. for/else
+
+`else` will be triggered if the `for` loop finishes without encountering `break`
+
+```
+for n in range(2, 10):
+    for x in range(2, n):
+        if n % x == 0:
+            print( n, 'equals', x, '*', n/x)
+            break
+    else:
+        # loop fell through without finding a factor
+        print(n, 'is a prime number')
+```</pre>
 </div>
 <div created="20190115153229195" modified="20190115155956928" tags="Notes" title="Introduction to Computer Network">
 <pre>&lt;&lt;list-links &quot;[tag[Introduction to Computer Network]]&quot;&gt;&gt;</pre>
