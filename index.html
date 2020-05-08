@@ -231,6 +231,8 @@ Error message and password prompt
 
 <li>crawl.png</li>
 
+<li>Cryptography &amp; Network Security 101</li>
+
 <li>Data Structure &amp; Algorithm</li>
 
 <li>Docker: Beginner's trials</li>
@@ -8927,22 +8929,22 @@ Error message and password prompt
 <div created="20191118083411212" modified="20200306073004060" title="$:/state/toc/TableOfContents/Knowledge Fragments-Security--81657105">
 <pre>open</pre>
 </div>
-<div created="20190725034446236" modified="20200219153509508" title="$:/state/toc/TableOfContents/Notes-AWS Data Analytics Fundamentals--81657105">
-<pre>open</pre>
+<div created="20190725034446236" modified="20200508135745232" title="$:/state/toc/TableOfContents/Notes-AWS Data Analytics Fundamentals--81657105">
+<pre>close</pre>
 </div>
 <div created="20190919153015500" modified="20190919153015501" title="$:/state/toc/TableOfContents/Notes-IBM Blockchain Essentials--81657105">
 <pre>open</pre>
 </div>
-<div created="20200204025035954" modified="20200221032205331" title="$:/state/toc/TableOfContents/Notes-Intermediate Python by Yasoob--81657105">
-<pre>open</pre>
+<div created="20200204025035954" modified="20200508135744529" title="$:/state/toc/TableOfContents/Notes-Intermediate Python by Yasoob--81657105">
+<pre>close</pre>
 </div>
-<div created="20190115155958109" modified="20200220093214555" title="$:/state/toc/TableOfContents/Notes-Introduction to Computer Network--81657105">
+<div created="20190115155958109" modified="20200508135743948" title="$:/state/toc/TableOfContents/Notes-Introduction to Computer Network--81657105">
 <pre>close</pre>
 </div>
 <div created="20190109164418771" modified="20191024092614896" title="$:/state/toc/TableOfContents/Tech Concepts-Java--81657105">
 <pre>open</pre>
 </div>
-<div list="[[About Me]]" title="$:/StoryList">
+<div list="[[Cryptography &amp; Network Security 101]] [[About Me]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8990,11 +8992,11 @@ Error message and password prompt
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1920&quot;
+            &quot;text&quot;: &quot;1536&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;1080&quot;
+            &quot;text&quot;: &quot;864&quot;
         }
     }
 }</pre>
@@ -10213,6 +10215,80 @@ w�4��z����c666vw������N�
 <pre>The following tiddlers were imported:
 
 # [[crawl]]</pre>
+</div>
+<div created="20200508135746600" modified="20200508145624886" tags="Notes" title="Cryptography &amp; Network Security 101">
+<pre>Based on linkedin course:
+https://www.linkedin.com/learning/learning-cryptography-and-network-security/
+
+Just dropping down concepts worth remembering.
+
+---
+
+!! Chapter 1. Five main services required for network security
+
+* Confidentiality (Data not exposed to unauthorized)
+* Integrity (Data unchanged unexpectedly)
+* Authentication (Confirm the identity of user/system)
+* Non-repudiation / accountability (Talks to the right person, using digital signature)
+* Availability (Mostly from DDoS attack, only one cannot be achieved by encryption, hard to prevent)
+
+''Passive attack'': Eavesdropping, hard to detect, focus on prevention &lt;br&gt;
+''Reconnaissance attack'': ping scan (ip address), port scan (services running) &lt;br&gt;
+''Active attack'': Denial of Service, Buffer overflow (exploit by overwriting the memory of the app, causing it to write somewhere else), password attack
+
+Classic encryption uses transposition and substitution.
+
+---
+
+!! Chapter 2. Symmetric encryption
+''Feistel Cipher'': Split the block &amp; Multiple rounds (generate subkeys), using XOR
+
+''DES'', breakable by enough processing power, 3DES is stronger but slow
+
+''AES'': 1. Substitute bytes 2. Shift rows 3. Mix columns 4. Add round keys; and repeat
+
+''Block ciphe'' vs ''Stream cipher'': spit into block against per character
+
+''Cipher Mode of Operation'': Different variation on how first block (or the result of it) affects the next block. Added randomness for extra security
+
+''WPA(2) is more secure than WEP(RC4 stream)'' in wireless communication
+
+---
+
+ !! Chapter 3. Assymetric encryption and Digital signature
+
+''Building digital signature:'' Hash a message, encrypt the hash with private key and send. Receiver can decrypt with sender's public key and compare the hash.
+
+''RSA and Diffie-Hellman'': Generate key-pairs using prime number and modulo, based on difficulties to factor large prime numbers.
+
+''PGP Pretty Good Privacy'': Software suite (Protocol later) that uses RSA algorithm to do encryption etc.
+
+''Public Key Infrastructure (PKI):''
+
+* Framework used to provide trust
+* Used a trusted third party (TTP) or certificate authority (CA)
+* to generate &amp; issue certs
+
+
+Company can create their own CA
+
+```
+PKI uses a X.509 certificate from the CA to provide assurance that a public key belongs to the entity within the certificate.
+```
+
+''Signing certificate from CA'': Similar to building digital signature.
+
+# Hash userId &amp; publickey, send to CA
+# CA sign the hash with private key
+# Signed certificate can be verified using CA's public key
+
+```
+All web browsers have a list of CA and info on whether a cert is valid or invoked.
+```
+
+---
+
+!! Chapert 4. Hash, Message Digest and Authentication</pre>
 </div>
 <div created="20191118150358527" modified="20191208171442800" tags="[[Knowledge Fragments]]" title="Data Structure &amp; Algorithm">
 <pre>https://leetcode.com/mh-c/
