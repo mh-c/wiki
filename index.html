@@ -10216,7 +10216,7 @@ w�4��z����c666vw������N�
 
 # [[crawl]]</pre>
 </div>
-<div created="20200508135746600" modified="20200508145624886" tags="Notes" title="Cryptography &amp; Network Security 101">
+<div created="20200508135746600" modified="20200510163707878" tags="Notes" title="Cryptography &amp; Network Security 101">
 <pre>Based on linkedin course:
 https://www.linkedin.com/learning/learning-cryptography-and-network-security/
 
@@ -10288,7 +10288,36 @@ All web browsers have a list of CA and info on whether a cert is valid or invoke
 
 ---
 
-!! Chapert 4. Hash, Message Digest and Authentication</pre>
+!! Chapert 4. Hash, Message Digest and Authentication
+
+Secure Hash Algo (SHA), Message Digest Algo (MD5)
+
+''Message digest:'' create a fingerprint for the original message 
+
+''Message Authentication Code (MAC):'' uses message digest along with a shared secret 
+
+''Digital Signature:'' created with private key and verified with public key
+
+''Password:'' Generally stored as a hashed value, weak password can be reverse-hashed by rainbow table.
+
+''Salt:'' Store the password together with a salt to prevent rainbow table attack.
+
+---
+
+!! Chapter 5. Secure Socket Layer (SSL) / Transport Layer Security (TLS)
+
+* ''Handshake protocol:'' negotiate session info, authenticate to each other, setup encryption parameters (MAC algo &amp; keys)
+* ''Change cipher spec protocol:'' indicate a change to new set of keys
+* ''SSL alert protocol:'' to notify error / status change
+* ''SSL record protocol:'' using the secret key to protect communication
+
+''Session:'' Created by handshake protocal, can have multiple connections
+
+---
+
+!! Chapter 6. Email Security &amp; Internet Protocol Security
+
+Opted out for now as it's not relevant to current working domain.</pre>
 </div>
 <div created="20191118150358527" modified="20191208171442800" tags="[[Knowledge Fragments]]" title="Data Structure &amp; Algorithm">
 <pre>https://leetcode.com/mh-c/
